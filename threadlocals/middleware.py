@@ -14,7 +14,7 @@ as modified by [http://sct.sphene.net Sphene Community tools].
 (see license.txt)
 """
 
-from threadlocals.threadlocals import set_thread_variable
+from .threadlocals import set_thread_variable
 
 class ThreadLocalMiddleware(object):
     """Middleware that puts the request object in thread local storage."""
