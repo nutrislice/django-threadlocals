@@ -15,8 +15,12 @@ as modified by [http://sct.sphene.net Sphene Community tools].
 """
 
 from .threadlocals import set_thread_variable
+try:
+    from django.utils.deprecation import MiddlewareMixin
+except ImportError:
+    MiddlewareMixin = object
 
-class ThreadLocalMiddleware(object):
+class ThreadLocalMiddleware(MiddlewareMixin):
     """Middleware that puts the request object in thread local storage."""
 
     def process_request(self, request):
