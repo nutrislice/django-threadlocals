@@ -2,5 +2,5 @@
 # Date: 1/24/13
 # Time: 8:06 PM
 #
-# Copyright 2012, Nutrislice Inc.  All rights reserved.
-VERSION = '0.8'
+# Copyright 2012, Nutrislice Inc.
+VERSION = '0.10'
