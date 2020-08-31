@@ -13,14 +13,26 @@ log = logging.getLogger('threadlocals.middleware')
 from threading import local
 
 _threadlocals = local()
+_threadvariables = set()
 
 
 def set_thread_variable(key, val):
+    _threadvariables.add(key)
     setattr(_threadlocals, key, val)
 
 
 def get_thread_variable(key, default=None):
     return getattr(_threadlocals, key, default)
+
+
+def del_thread_variable(key):
+    if hasattr(_threadlocals, key):
+        delattr(_threadlocals, key)
+
+
+def del_thread_variables():
+    for key in _threadvariables:
+        del_thread_variable(key)
 
 
 def get_current_request():

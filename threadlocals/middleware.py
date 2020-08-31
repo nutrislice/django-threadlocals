@@ -14,7 +14,7 @@ as modified by [http://sct.sphene.net Sphene Community tools].
 (see license.txt)
 """
 
-from .threadlocals import set_thread_variable
+from .threadlocals import set_thread_variable, del_thread_variables
 try:
     from django.utils.deprecation import MiddlewareMixin
 except ImportError:
@@ -25,5 +25,11 @@ class ThreadLocalMiddleware(MiddlewareMixin):
 
     def process_request(self, request):
         set_thread_variable('request', request)
-#        set_current_user(request.user) # not going to store user in TL's for now, since we can get it from the request if we need it, and I read somewhere that accessing reqeust.user can potentially prevent view caching from functioning correctly
-        
+        # set_current_user(request.user) # not going to store user in TL's for now, since we can get it from the request if we need it, and I read somewhere that accessing reqeust.user can potentially prevent view caching from functioning correctly
+
+    def process_response(self, request, response):
+        del_thread_variables()
+        return response
+
+    def process_exception(self, request, exception):
+        del_thread_variables()
