@@ -1,14 +1,16 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, url
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 from django.http import HttpResponse
 
+
 def empty_view(request):
     return HttpResponse("")
 
-urlpatterns = patterns('',
+
+urlpatterns = [
     # Examples:
     url(r'^$', empty_view),
     # url(r'^testrunner/', include('testrunner.foo.urls')),
@@ -18,4 +20,4 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
-)
+]

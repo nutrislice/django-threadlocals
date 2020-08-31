@@ -1,12 +1,15 @@
-from django.test.simple import DjangoTestSuiteRunner
+# from django.test import DjangoTestSuiteRunner
+from django.test.runner import DiscoverRunner
 
-class NoDbTestRunner(DjangoTestSuiteRunner):
-  """ A test runner to test without database creation """
 
-  def setup_databases(self, **kwargs):
-    """ Override the database creation defined in parent class """
-    pass
+# class NoDbTestRunner(DjangoTestSuiteRunner):
+class NoDbTestRunner(DiscoverRunner):
+    """ A test runner to test without database creation """
 
-  def teardown_databases(self, old_config, **kwargs):
-    """ Override the database teardown defined in parent class """
-    pass
+    def setup_databases(self, **kwargs):
+        """ Override the database creation defined in parent class """
+        pass
+
+    def teardown_databases(self, old_config, **kwargs):
+        """ Override the database teardown defined in parent class """
+        pass
