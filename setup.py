@@ -19,9 +19,10 @@ setuptools.setup(
     description="Contains utils for storing and retreiving values from threadlocals, and middleware for placing the current Django request in threadlocal storage.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url='https://github.com/nebstrebor/django-threadlocals',
+    url="https://github.com/nebstrebor/django-threadlocals",
     classifiers=[
         "Programming Language :: Python :: 2",
+        "Programming Language :: Python :: 3",
         "License :: OSI Approved :: BSD License",
         "Operating System :: OS Independent",
         "Framework :: Django",
