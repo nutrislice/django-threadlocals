@@ -21,7 +21,6 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/nebstrebor/django-threadlocals",
     classifiers=[
-        "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: BSD License",
         "Operating System :: OS Independent",
