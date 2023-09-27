@@ -1,4 +1,4 @@
-from django.conf.urls import include, url
+from django.urls import include, path, re_path
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -22,14 +22,14 @@ def exception_view(request):
 
 urlpatterns = [
     # Examples:
-    url(r'^$', empty_view, name='empty'),
-    url(r'query/', query_view, name='query'),
-    url(r'exception/', exception_view, name='exception'),
-    # url(r'^testrunner/', include('testrunner.foo.urls')),
+    path('', empty_view, name='empty'),
+    re_path(r'query/', query_view, name='query'),
+    re_path(r'exception/', exception_view, name='exception'),
+    # path('testrunner/', include('testrunner.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    # path('admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+    # path('admin/', include(admin.site.urls)),
 ]
