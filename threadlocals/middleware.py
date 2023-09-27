@@ -25,13 +25,22 @@ class ThreadLocalMiddleware(MiddlewareMixin):
     """Middleware that puts the request object in thread local storage."""
 
     def process_request(self, request):
-        set_thread_variable('request', request)
+        try:
+            set_thread_variable('request', request)
+        except:
+            pass
         # set_current_user(request.user) # not going to store user in TL's for now, since we can get it from the request if we need it, and I read somewhere that accessing reqeust.user can potentially prevent view caching from functioning correctly
 
     def process_response(self, request, response):
-        del_thread_variables()
+        try:
+            del_thread_variables()
+        except:
+            pass
         return response
 
     def process_exception(self, request, exception):
-        del_thread_variables()
+        try:
+            del_thread_variables()
+        except:
+            pass
         return None
