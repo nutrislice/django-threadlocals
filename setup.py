@@ -13,7 +13,7 @@ with open("README.md", "r") as fh:
 setuptools.setup(
     name="django-threadlocals",
     packages=setuptools.find_packages(),
-    version="0.10",
+    version="0.20",
     author="Ben Roberts",
     author_email="ben@nutrislice.com",
     description="Contains utils for storing and retreiving values from threadlocals, and middleware for placing the current Django request in threadlocal storage.",

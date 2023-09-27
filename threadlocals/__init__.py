@@ -3,4 +3,4 @@
 # Time: 8:06 PM
 #
 # Copyright 2012, Nutrislice Inc.
-VERSION = '0.10'
+VERSION = '0.20'
