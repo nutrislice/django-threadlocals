@@ -20,6 +20,7 @@ try:
 except ImportError:
     MiddlewareMixin = object
 
+
 class ThreadLocalMiddleware(MiddlewareMixin):
     """Middleware that puts the request object in thread local storage."""
 
@@ -33,3 +34,4 @@ class ThreadLocalMiddleware(MiddlewareMixin):
 
     def process_exception(self, request, exception):
         del_thread_variables()
+        return None
