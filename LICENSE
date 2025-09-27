@@ -1,0 +1,24 @@
+SPDX-License-Identifier: LicenseRef-Nutrislice-Proprietary
+
+Copyright (c) 2011–present Nutrislice, Inc. All rights reserved.
+
+The software in this repository and/or file(s) and associated documentation (the "Software") are proprietary and confidential to Nutrislice, Inc.
+No license is granted to any party except as expressly authorized in a separate written agreement with Nutrislice, Inc.
+
+You may not copy, modify, create derivative works of, distribute, publicly display, publicly perform, sublicense,
+or otherwise use the Software, except as expressly permitted in a written agreement signed by Nutrislice, Inc.
+
+Contractors and service providers may use the Software solely on Nutrislice’s behalf and solely as necessary to
+perform services for Nutrislice, subject to applicable confidentiality and security obligations.
+
+You may not reverse engineer, decompile, or disassemble the Software except to the extent (if any) such restriction
+is prohibited by applicable law.
+
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE,
+INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE,
+AND NON-INFRINGEMENT. TO THE MAXIMUM EXTENT PERMITTED BY LAW, NUTRISLICE, INC. SHALL NOT BE LIABLE FOR ANY DAMAGES
+ARISING FROM OR RELATING TO THE SOFTWARE OR ITS USE, INCLUDING WITHOUT LIMITATION DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+The Software may include or be used with third-party components that are separately licensed. All such third-party
+components are governed by their own licenses.
